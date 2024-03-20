@@ -33,29 +33,25 @@ pipeline {
                 echo "Code probably does not work, but uh... here we go."
             }
         }
-    
-    	stage("SonarQube Analysis") {
-           steps {
-	           script {
-		        withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') { 
-                	sh "mvn sonar:sonar"
-			echo "SECCCCCCCCCCCCCURITY SCAAAAAAAAAAAAAAAAAAAAANS"
+        
+        stage("SonarQube Analysis") {
+            steps {
+                script {
+                    withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') { 
+                        sh "mvn sonar:sonar"
+                        echo "SECCCCCCCCCCCCCURITY SCAAAAAAAAAAAAAAAAAAAAANS"
+                    }
+                }
             }
         }
- 
-	stage("Quality Gate") {
-           steps {
-        	   script {
-                	waitForQualityGate abortPipeline: false, credentialsId: 'jenkins-sonarqube-token'
-                	echo "Quality Gate Passed"
-                        }	
-                    }
-                }   
+        
+        stage("Quality Gate") {
+            steps {
+                script {
+                    waitForQualityGate abortPipeline: false, credentialsId: 'jenkins-sonarqube-token'
+                    echo "Quality Gate Passed"
+                }
             }
         }
     }
 }
-
-
-
-
