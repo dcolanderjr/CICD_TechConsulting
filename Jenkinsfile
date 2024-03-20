@@ -39,7 +39,7 @@ pipeline {
 	           script {
 		        withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') { 
                 sh "mvn sonar:sonar"
-			    echo "SECCCCCCCCCCCCCURITY SCAAAAAAAAAAAAAAAAAAAAANS"
+		echo "SECCCCCCCCCCCCCURITY SCAAAAAAAAAAAAAAAAAAAAANS"
             }
         }
  
