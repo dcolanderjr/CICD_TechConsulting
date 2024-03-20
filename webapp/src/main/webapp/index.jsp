@@ -20,7 +20,7 @@
     <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
     <hr>
     <br>
-    <p>When you create an account, you agree to the legal stuff. <a href="#">Terms & Privacy</a>.</p>
+    <p>When you create an account, you agree to the legal stuff. We take first borns, and also accept Kraby Patties. <a href="#">Terms & Privacy</a>.</p>
     <button type="submit" class="registerbtn">Register</button>
   </div>
   <div class="container signin">
