@@ -33,19 +33,18 @@ pipeline {
                 echo "Code probably does not work, but uh... here we go."
             }
         }
-    }
-
-
-	 stage("SonarQube Analysis"){
+    
+    	stage("SonarQube Analysis") {
            steps {
 	           script {
 		        withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') { 
                         sh "mvn sonar:sonar"
-			echo "SECCCCCCCCCCCCCURITY SCAAAAAAAAAAAAAAAAAAAAANS"
-		        }
-	           }	
-           }
-       }
+			            echo "SECCCCCCCCCCCCCURITY SCAAAAAAAAAAAAAAAAAAAAANS"
+                    }
+                }
+            }
+        }
+    }
 }
 
        /* stage("Quality Gate"){
