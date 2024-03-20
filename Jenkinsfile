@@ -15,18 +15,13 @@ pipeline {
 
         stage("Checkout from SCM") {
             steps {
-                git branch: 'main', credentialsId: 'github', url: 'https://github.com/dcolanderjr/CICD_TechConsulting'
+                git branch: 'main', credentialsId: 'GitHub', url: 'https://github.com/dcolanderjr/CICD_TechConsulting'
                 echo "Gittin' er done!"
             }
         }
 
         stage("Build Application") {
             steps {
-                script {
-                    // Set JAVA_HOME
-                    def javaHome = tool 'Java17'
-                    env.JAVA_HOME = javaHome
-                }
                 sh "mvn clean package"
                 echo "Building that thang!"
             }
@@ -34,11 +29,6 @@ pipeline {
 
         stage("Test Application") {
             steps {
-                script {
-                    // Set JAVA_HOME
-                    def javaHome = tool 'Java17'
-                    env.JAVA_HOME = javaHome
-                }
                 sh "mvn test"
                 echo "Code probably does not work, but uh... here we go."
             }
