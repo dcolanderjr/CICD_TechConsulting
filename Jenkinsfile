@@ -5,15 +5,15 @@ pipeline {
         maven 'Maven3'
     }
 
-     environment {
-	    APP_NAME            = "ci_app_pipeline"
-            RELEASE             = "1.0.0"
-            DOCKER_USER         = "dcolanderjr"
-            DOCKER_PASS         = 'dockerhub'
-            IMAGE_NAME          = "${DOCKER_USER}" + "/" + "${APP_NAME}"
-            IMAGE_TAG           = "${RELEASE}-${BUILD_NUMBER}"
+    environment {
+        APP_NAME            = "ci_app_pipeline"
+        RELEASE             = "1.0.0"
+        DOCKER_USER         = "dcolanderjr"
+        DOCKER_PASS         = "DockerHub"
+        IMAGE_NAME          = "${DOCKER_USER}/${APP_NAME}"
+        IMAGE_TAG           = "${RELEASE}-${BUILD_NUMBER}"
     }
-    
+
     stages {
         stage("Cleanup Workspace") {
             steps {
@@ -61,8 +61,9 @@ pipeline {
                     echo "Quality Gate Passed"
                 }
             }
-
-        stage ("Build & Push Docker Image") {
+        }
+        
+        stage("Build & Push Docker Image") {
             steps {
                 script {
                     docker.withRegistry('',DOCKER_PASS) {
@@ -72,7 +73,6 @@ pipeline {
                     docker.withRegistry('',DOCKER_PASS) {
                         docker_image.push("${IMAGE_TAG}")
                         docker_image.push('latest')
-                        }
                     }
                 }
             }
