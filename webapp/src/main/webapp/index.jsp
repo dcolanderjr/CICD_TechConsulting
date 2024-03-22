@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Title Here</title>
+  <!-- Add Roboto font from Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif; /* Use Roboto font */
       background-color: #000;
       color: #fff;
       margin: 0;
@@ -33,6 +35,7 @@
       box-sizing: border-box;
       background-color: #666;
       color: #fff;
+      font-family: 'Roboto', sans-serif; /* Use Roboto font */
     }
 
     input[type=text]:focus, input[type=password]:focus {
@@ -49,6 +52,7 @@
       border-radius: 4px;
       cursor: pointer;
       width: 100%;
+      font-family: 'Roboto', sans-serif; /* Use Roboto font */
     }
 
     button:hover {
@@ -69,6 +73,7 @@
       color: #fff;
       text-align: center;
       margin-bottom: 20px;
+      font-weight: 500; /* Use Roboto Medium */
     }
 
     hr {
@@ -97,7 +102,7 @@
 
 <form action="action_page.php">
   <div class="container">
-    <h1>And we have completed the application!</h1>
+    <h1>Application and CICD Problem</h1>
     <p>Let me know how you did! Feel free to drop me a line on GitHub!</p>
     <hr>
      
