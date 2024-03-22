@@ -1,108 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration Form</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-    }
-
-    .container {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 300px;
-      margin: auto;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    label {
-      font-weight: bold;
-    }
-
-    input[type="text"],
-    input[type="password"] {
-      width: calc(100% - 12px);
-      padding: 10px;
-      margin: 8px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-
-    hr {
-      border: 1px solid #f0f0f0;
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-
-    .registerbtn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-
-    .registerbtn:hover {
-      background-color: #45a049;
-    }
-
-    .signin {
-      text-align: center;
-    }
-
-    .signin a {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    .signin a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-
 <form action="action_page.php">
   <div class="container">
-    <h1>Registration Form</h1>
+    <h1>And we have completed the application!</h1>
     <p>Let me know how you did! Feel free to drop me a line on GitHub!</p>
     <hr>
      
-    <label for="Name">What should we call you?: </label>
+    <label for="Name"><b>What should we call you?: </b></label>
     <input type="text" placeholder="Enter Full Name" name="Name" id="Name" required>
+    <br>
     
-    <label for="email">How can we reach you?: </label>
+    <label for="email"><b>How can we reach you?: </b></label>
     <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    <br>
 
-    <label for="psw">Ancient Secret: </label>
+    <label for="psw"><b>Ancient Secret: </b></label>
     <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    <br>
 
-    <label for="psw-repeat">Ancient Secret, again: </label>
+    <label for="psw-repeat"><b>Ancient Secret, again: </b></label>
     <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-    
     <hr>
-    <p>When you create an account, you agree to the legal stuff.<a href="#">Terms & Privacy</a>.</p>
+    <br>
+    <p>When you create an account, you agree to the legal stuff. I eat sand. <a href="#">Terms & Privacy</a>.</p>
     <button type="submit" class="registerbtn">Register</button>
   </div>
-
   <div class="container signin">
     <p>Already have an account? <a href="#">GET ON IN HERE!</a>.</p>
   </div>
+
+   <h1> And we did it, we have created our first CI/CD Pipeline!</h1>
+   <br>
+   <h1> This concludes the project. Thank you again! </h1>
+   <h1> kloudkamp.com  </h1>
 </form>
-
-</body>
-</html>
-
