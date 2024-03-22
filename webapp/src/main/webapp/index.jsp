@@ -14,6 +14,8 @@
       color: #fff;
       margin: 0;
       padding: 0;
+      display: flex;
+      justify-content: space-between;
     }
 
     .container {
@@ -23,6 +25,11 @@
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease; /* Add transition effect */
+    }
+
+    .container:hover {
+      transform: scale(1.05); /* Add scale effect on hover */
     }
 
     input[type=text], input[type=password] {
@@ -43,8 +50,8 @@
       border: 1px solid #fff;
     }
 
-    button {
-      background-color: #4CAF50;
+    button.registerbtn {
+      background-color: #000;
       color: #fff;
       padding: 14px 20px;
       margin: 8px 0;
@@ -55,9 +62,8 @@
       font-family: 'Roboto', sans-serif; /* Use Roboto font */
     }
 
-    button:hover {
-      background-color: #45a049;
-      opacity: 0.8;
+    button.registerbtn:hover {
+      background-color: #333;
     }
 
     .signin {
@@ -96,14 +102,20 @@
     a:hover {
       text-decoration: underline;
     }
+
+    .right-content {
+      margin-left: auto;
+      margin-right: 50px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
 
 <form action="action_page.php">
   <div class="container">
-    <h1>Application and CICD Problem</h1>
-    <p>Let me know how you did! Feel free to drop me a line on GitHub!</p>
+    <h1>Application and CICD Pipeline completed! Hi Ehtasham & Ameer!</h1>
+    <p>Let me know how you did! Feel free to drop me a line on <a href="https://github.com/dcolanderjr">GitHub</a>!</p>
     <hr>
      
     <label for="Name"><b>What should we call you?: </b></label>
@@ -121,14 +133,13 @@
     <p>When you create an account, you agree to the legal stuff. I eat sand. <a href="#">Terms & Privacy</a>.</p>
     <button type="submit" class="registerbtn">Register</button>
   </div>
-  <div class="container signin">
-    <p>Already have an account? <a href="#">GET ON IN HERE!</a>.</p>
-  </div>
 
-   <h1> And we did it, we have created our first CI/CD Pipeline!</h1>
-   <br>
-   <h1> This concludes the project. Thank you again! </h1>
-   <h1> kloudkamp.com  </h1>
+   <div class="right-content">
+     <h1> And we did it, we have created our first CI/CD Pipeline!</h1>
+     <br>
+     <h1> This concludes the project. Thank you again! </h1>
+     <h1><a href="https://kloudkamp.com">kloudkamp.com</a></h1>
+   </div>
 </form>
 
 </body>
