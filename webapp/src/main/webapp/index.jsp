@@ -8,7 +8,8 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #000;
+      color: #fff;
       margin: 0;
       padding: 0;
     }
@@ -16,10 +17,10 @@
     .container {
       width: 400px;
       margin: 50px auto;
-      background-color: #fff;
+      background-color: #333;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     }
 
     input[type=text], input[type=password] {
@@ -27,14 +28,21 @@
       padding: 12px 20px;
       margin: 8px 0;
       display: inline-block;
-      border: 1px solid #ccc;
+      border: 1px solid #fff;
       border-radius: 4px;
       box-sizing: border-box;
+      background-color: #666;
+      color: #fff;
+    }
+
+    input[type=text]:focus, input[type=password]:focus {
+      outline: none;
+      border: 1px solid #fff;
     }
 
     button {
       background-color: #4CAF50;
-      color: white;
+      color: #fff;
       padding: 14px 20px;
       margin: 8px 0;
       border: none;
@@ -44,11 +52,13 @@
     }
 
     button:hover {
+      background-color: #45a049;
       opacity: 0.8;
     }
 
     .signin {
       text-align: center;
+      color: #ccc;
     }
 
     .signin a {
@@ -56,7 +66,7 @@
     }
 
     h1 {
-      color: #333;
+      color: #fff;
       text-align: center;
       margin-bottom: 20px;
     }
@@ -64,12 +74,12 @@
     hr {
       border: 0;
       height: 1px;
-      background: #ccc;
+      background: #fff;
       margin: 20px 0;
     }
 
     p {
-      color: #666;
+      color: #ccc;
       text-align: center;
     }
 
